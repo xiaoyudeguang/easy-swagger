@@ -14,12 +14,11 @@
 </dependency>
 ```
 
-## 日志处理器
-那么问题来了，日志采集器的采集能力体现在哪呢？采集的日志又去哪了？别急，我们定义这样一个(或多个)类（此处用到了easy-brancher，项目地址：https://gitee.com/xiaoyudeguang/easy-brancher）：
+## 使用案例
 ```
-@SpringController( value= “democontroller", todo = { "数据库日志处理器" })
-public class DBLogHandler extends AbstractLogBrancher{
-	
+@SpringController( value= “democontroller", todo = { “easy-swagger使用示例" })
+public class DemoController{
+
 	@Override
 	public Object doService(List<LogInfo> infos) {
 		Console.log("日志", infos);
