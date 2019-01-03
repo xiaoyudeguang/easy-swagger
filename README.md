@@ -19,7 +19,7 @@
 @SpringController( value= “democontroller", todo = { “easy-swagger使用示例" })
 public class DemoController{
 
-	@SpringMapping( value= “test", todo = { “easy-swagger示例方法" })
+	@SpringMapping( value= “test", todo = { “easy-swagger示例方法" }, note =“随便写点啥，当做方法简介吧“)
 	public Object test(string name, string age) {
 		Console.log( name, age);
 		return “easy-swagger is an good tool！";
