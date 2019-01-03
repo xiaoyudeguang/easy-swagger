@@ -17,7 +17,7 @@
 ## 日志处理器
 那么问题来了，日志采集器的采集能力体现在哪呢？采集的日志又去哪了？别急，我们定义这样一个(或多个)类（此处用到了easy-brancher，项目地址：https://gitee.com/xiaoyudeguang/easy-brancher）：
 ```
-@Brancher(key = "db_log_handler", todo = { "数据库日志处理器" }, args = {LogConfig.KEY})
+@SpringController( value= “democontroller", todo = { "数据库日志处理器" })
 public class DBLogHandler extends AbstractLogBrancher{
 	
 	@Override
