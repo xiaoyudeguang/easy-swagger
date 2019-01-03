@@ -19,10 +19,10 @@
 @SpringController( value= “democontroller", todo = { “easy-swagger使用示例" })
 public class DemoController{
 
-	@Override
-	public Object doService(List<LogInfo> infos) {
-		Console.log("日志", infos);
-		return "我最棒！";
+	@SpringMapping( value= “test", todo = { “easy-swagger示例方法" })
+	public Object test(string name, string age) {
+		Console.log( name, age);
+		return “easy-swagger is an good tool！";
 	}
 }
 ```
