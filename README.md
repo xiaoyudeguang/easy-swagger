@@ -24,11 +24,5 @@ public class DemoController{
 		Console.log("日志", infos);
 		return "我最棒！";
 	}
-
-	@Override
-	public void addLogConfig(EasyList keys) {
-		keys.add("db_log_handler");
-	}
 }
 ```
-> 自定义的日志处理器需要继承easy-log提供的AbstractLogBrancher抽象类。需要实现两个方法：doService()方法是真正的接收并处理日志的方法；addLogConfig()方法中将自定义的日志处理器中的@Brancher注解中的key参数注册到easy-log中，这样就可以在doService()方法接收日志信息了。
